@@ -1,0 +1,35 @@
+Uzair Akram
+LAB2 - CSCE3530
+
+Usage:
+there are two files
+server.c
+client.c
+
+compile server.c using:
+gcc -o pserver server.c
+run using:
+./pserver <portnumber>
+
+compile client.c using:
+gcc -o client client.c
+run using:
+./client <portnumber>
+Issue:
+please input url starting with "www."
+Omit the https://
+
+README
+This is a proxy server Program that caches 5 raw html pages
+and deslivers them upon client request, if the page is not in
+cache the proxy server will forward request to the client and
+store the requested page in cache.
+¯\_(ツ)_/¯
+
+About
+The program is a INET domain socket using the standard client-server model of IPC communication. The server is an HTTP proxy server for a single client. It retrives the html page from the requested URL provided by the client. The client makes an HTTP request by providing a URL, the URL is parsed by the server into a usable format which is then used to retrieve info from DNS and make a query from the webserver hosting the webpage. The webpage serves the html page to the proxy server, the proxy server then forwards the mesage to the client. The html page is then printed to the client along with some network stats: error or success code eg. 200, 404 etc., version of the page along with data ETag etc. The html page retrieved by the proxy server seemed very similar to the one retrieved by the browser. The proxy server is tasked to cache up to 5 queries and the webpages are saved accoring to time stamp. The webpages are cached only if the recieved webpage is code: 200. More over the surver can also block certain hostnames and pages for a given amount of period.
+
+
+
+
+
